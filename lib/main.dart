@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'screens/home_screen.dart';
 
 void main() {
@@ -17,9 +18,10 @@ class ExpenseTrackerApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF6750A4),
+          seedColor: const Color(0xFF915FB5),
           brightness: Brightness.light,
         ),
+        textTheme: GoogleFonts.outfitTextTheme(),
         appBarTheme: const AppBarTheme(
           centerTitle: true,
           elevation: 0,
@@ -28,8 +30,11 @@ class ExpenseTrackerApp extends StatelessWidget {
       darkTheme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF6750A4),
+          seedColor: const Color(0xFF915FB5),
           brightness: Brightness.dark,
+        ),
+        textTheme: GoogleFonts.outfitTextTheme(
+          ThemeData(brightness: Brightness.dark).textTheme,
         ),
         appBarTheme: const AppBarTheme(
           centerTitle: true,
